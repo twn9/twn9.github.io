@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+        <title>{% block title %}{%endblock%}</title>
+
+        <body>
+
+            <div class="hero">
+                <div class="nav">
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about me</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#socials">socials</a></li>
+                    </ul>
+                </div>
+            </div>
+            <section id="home">
+                <div class="welcome">Welcome to my website</div>
+                    <div class="sub">This is a something I created to display some of my work and have some fun</div>
+                <div class = "wave">
+                    <img src="{{url_for('static', filename='wave.png')}}" class="animate__animated animate__wobble animate__slower">
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="info">
+                    <p>Hello, My name is Timothy and, right now, im a full-time student studying computer science.
+                    When im not being chased by deadlines I like to learn and build projects that interest me - like this website!</p>
+                </div>
+                <div class = "book">
+              <img src = "{{url_for('static', filename='Notebook.png')}}" class="animate__animated animate__fadeInDown animate__delay-2s animate__slow">
+                </div>
+                <div class = "pencil">
+                    <!-- <img src= -->
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="site">
+                    <p>
+                        I'm still working on the layout of this website and will update if as frequently as I can. For now I can talk a bit 
+                        about the site. This site is built using flask and deployed with AWS. The icons are mainly from icons8 and the animations
+                        are a combination of my own css, hover.css, and animate.css.
+                    </p>
+                <div class="mac">
+                    <img src="{{url_for('static', filename='imac.png')}}" class="animate__animated animate__fadeInDown animate__delay-4s animate__slow">
+                </div>
+                </div>
+            </section>
+
+            <section id="socials">
+                <div class="socials">
+                <p>You can find me and my work here!</p>
+                
+        </div>
+        <a href="https://github.com/twn9">
+            <div class="git-icon">
+                <img class="hvr-grow-rotate" src= "{{url_for('static', filename='GitHub.png')}}" alt="github icon">
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/timothy-na-099ba51b5/">
+            <div class="linked-icon">
+                <img class="hvr-grow-rotate" src= "{{url_for('static', filename='LinkedIn.png')}}" alt="github icon">
+            </div>
+        </a>
+            </section>
+
+        </body>
+    </head>
+</html>
